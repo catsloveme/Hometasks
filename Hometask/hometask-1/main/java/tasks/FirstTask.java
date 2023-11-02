@@ -11,7 +11,16 @@ public class FirstTask {
         for (int i = 0; i < length; i++) {
             array[i] = scanner.nextInt();
         }
-        Arrays.sort(array);
+        int tmp;
+        for (int i = 0; i < length; ++i) {
+            for (int j = 0; j < length - j; ++j) {
+                if (array[j] > array[j + 1]) {
+                    tmp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = tmp;
+                }
+            }
+        }
 
         System.out.println(Arrays.toString(array));
     }

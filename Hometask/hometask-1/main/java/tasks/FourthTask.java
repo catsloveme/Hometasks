@@ -9,12 +9,12 @@ public class FourthTask {
         Scanner scanner = new Scanner(System.in);
         int length = scanner.nextInt();
         int[] array = new int[length];
-        int sum = 0;
+        double sum = 0;
         for (int i = 0; i < length; i++) {
             array[i] = scanner.nextInt();
             sum+=array[i];
         }
-        double average = (double) sum/length;
+        double average = sum/length;
 
         System.out.println("Среднее арифметическое массива " + Arrays.toString(array)+" равно "+average);
     }
