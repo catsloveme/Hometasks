@@ -11,7 +11,11 @@ public class FifthTask {
 
         for (int i = 0; i < passwordArray.length; i++) {
             if (Character.isDigit(passwordArray[i])) {
-                newPassword.append(++passwordArray[i]);
+                if (passwordArray[i] == '9') {
+                    newPassword.append(0);
+                } else {
+                    newPassword.append(++passwordArray[i]);
+                }
             } else {
                 newPassword.append((int) passwordArray[i]);
             }
